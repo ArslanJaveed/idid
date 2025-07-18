@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
         }
 
         try {
-            const response = await axiosInstance.get('user');
+            const response = await axiosInstance.post('company/login');
             const userData = response.data;
             if (userData && userData.company_code) {
                 setUserType('company');
